@@ -1,9 +1,8 @@
 @import "../../global.scss";
 
-.menu{
-    width: 300px;
+.menu {
+    width: 270px;
     height: 100vh;
-    background-color: $mainColor;
     position: fixed;
     top: 0;
     right: 0;
@@ -15,29 +14,31 @@
     right: -300px;
     transition: all 1s ease;
 
-    &.active{
+    &.active {
         right: 0;
+        background-color: $menuActive;
+
     }
 
-    ul{
+    ul {
         margin: 0;
         padding: 0;
         list-style: none;
         font-size: 30px;
-        font-weight: 100;
-        color: white;
-        width: 60%;
-    li{
-        margin-bottom: 25px;
-        a{
-        font-size: inherit;
-        color: inherit;
-        text-decoration: none;
-        }
-    
-    &:hover{
         font-weight: 500;
+        color: $secondaryFontColor;
+        width: 60%;
+        li {
+            margin-bottom: 25px;
+            a {
+                font-size: inherit;
+                color: inherit;
+                text-decoration: none;
+            }
+
+            &:hover {
+                font-weight: 600;
+            }
+        }
     }
-    }
-}
 }

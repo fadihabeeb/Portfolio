@@ -1,3 +1,109 @@
-.contact{
-    background-color: lightblue;
+@import "../../global.scss";
+.contact {
+    background-color: $secondaryColor;
+    display: flex;
+    // background-image: url("contact.jpg");
+    // background-size: 100% 100%;
+
+    @include mobile {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .left {
+        overflow: hidden;
+        flex: 1;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .right {
+        .container {
+            width: 500px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: $secondaryColor;
+            justify-content: center;
+            box-shadow: 10px 5px 35px rgba(0, 0, 0, 1);
+        }
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            font-size: 31px;
+            color: crimson;
+            margin-bottom: 1.5em;
+        }
+        form {
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // justify-content: space-around;
+            ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: white;
+                opacity: 1; /* Firefox */
+              }
+            input {
+                background-color: $secondaryColor;
+                width: 80%;
+                height: 30px;
+                font-size: 14px;
+                border: none;
+                border-bottom: 3px solid white;
+                margin-bottom: 1.5em;
+           
+                &:focus {
+                    outline: none;
+                }
+                
+           
+                @include mobile {
+                    width: 200px;
+                    height: 20px;
+                }
+            }
+            textarea {
+                background-color: $secondaryColor;
+                width: 80%;
+                height: 200px;
+                font-style: 14px;
+                border: none;
+                border-bottom: 3px solid white;
+                margin-bottom: 1.5em;
+
+                &:focus {
+                    outline: none;
+                }
+                @include mobile {
+                    width: 200px;
+                    height: 100 px;
+                }
+            }
+            button {
+                width: 80%;
+                height: 40px;
+                color: white;
+                background-color: crimson;
+                // border-radius: 10px;
+                font-weight: 400;
+                border: none;
+                cursor: pointer;
+
+                &:focus {
+                    overflow: none;
+                }
+            }
+            span {
+                color: green;
+            }
+        }
+    }
 }

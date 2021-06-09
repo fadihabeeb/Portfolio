@@ -1,85 +1,114 @@
 @import "../../global.scss";
-.topbar{
+
+.topbar {
     width: 100%;
     height: 70px;
-    background-color:white;
+    background-color: #252525;
     color: $mainColor;
     position: fixed;
     top: 0;
     z-index: 3;
     transition: all 2s ease;
 
-.wrapper{
-    padding: 10px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-.left{
-    display: flex;
-    align-items: center;
-.logo{
-    font-size: 40px;
-    font-weight: bold;
-    text-decoration: none;
-    color: inherit;
-    margin-right: 40px;
-}
-.itemContainer{
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
-    
-    .icon{
-        font-size: 18px;
-        margin-right: 5px;
-    }
-
-    span{
-        font-size: 15px;
-        font-weight: 400;
-    }
-}
-}
-
-.right{
-    .hamburger{
-        width: 32px;
-        height: 25px;
+    .wrapper {
+        padding: 10px 30px;
         display: flex;
-        flex-direction: column;
+        align-items: center;
         justify-content: space-between;
-        cursor: pointer ;
-        span{
-            width: 100%;
-            height: 3px;
-            background-color: $mainColor;
-            transform-origin: left;
+
+        .left {
+            color: $mainColor;
+
+            display: flex;
+            align-items: center;
+            .logo {
+                font-size: 40px;
+                font-weight: bold;
+                text-decoration: none;
+                color: inherit;
+                margin-right: 40px;
+
+                .logo-less {
+                    color: crimson;
+                }
+            }
             transition: all 2s ease;
-        }
-    }
-}
-}
-&.active{
-    background-color: $mainColor;
-    color: white;
-    .hamburger{
-        span{
-        &:first-child{
-            background-color: white;
-            transform: rotate(45deg); 
+
+            .itemContainer {
+                @include mobile {
+                    display: none;
+                }
+
+                display: flex;
+                align-items: center;
+                margin-left: 30px;
+
+                .icon {
+                    font-size: 22px;
+                    margin-right: 8px;
+                }
+
+                span {
+                    transition: all 2s ease;
+
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: $mainColor;
+                }
+            }
         }
 
-        &:nth-child(2){
-            opacity: 0;
-        }
+        .right {
+            .hamburger {
+                width: 32px;
 
-        &:last-child{
-            background-color: white;
-            transform: rotate(-45deg); 
-
+                height: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                span {
+                    width: 100%;
+                    height: 3px;
+                    background-color: white;
+                    transform-origin: left;
+                    transition: all 2s ease;
+                }
+            }
         }
     }
+    &.active {
+        // background-color: $mainColor;
+
+        .left {
+            
+            color: $secondaryFontColor;
+            .itemContainer {
+            span {
+                color: $secondaryFontColor;
+                font-weight: 600;
+                
+            }
+        }
+        }
+        background-color: $menuActive;
+        color: $secondaryFontColor;
+        .hamburger {
+            span {
+                &:first-child {
+                    background-color: $secondaryFontColor;
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:last-child {
+                    background-color: $secondaryFontColor;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
     }
-}
 }

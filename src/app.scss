@@ -22,12 +22,14 @@
             }
 
             animation: 3s ease-in-out 2s 1 slideUp;
+
             animation-fill-mode:forwards;
 
             @keyframes slideUp {
              
                 100% {
                     height: 0;
+
                     //   position: static;
                 }
               }
@@ -36,7 +38,7 @@
     .sections {
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: lightsalmon;
+        background-color: #252525;
         position: relative;
         top: 70px;
         scroll-snap-type: y mandatory;

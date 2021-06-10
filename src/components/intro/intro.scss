@@ -5,7 +5,7 @@
     color: white;
     display: flex;
 
-    @include mobile{
+    @include mobile {
         flex-direction: column;
         align-items: center;
     }
@@ -17,12 +17,16 @@
         justify-content: center;
 
         .imgContainer {
-            display: flex;
             overflow: hidden;
-            opacity: 0.2;
 
-            width: 90%;
-            height: 90%;
+            display: flex;
+            opacity: 0.2;
+            align-items: center;
+            justify-content: center;
+
+            
+            width: 750px;
+            height: 750px;
             opacity: 0;
 
             background-color: crimson;
@@ -31,36 +35,42 @@
             align-items: end;
             justify-content: center;
             animation: 4s ease-in 3s 1 slideFromLeft;
-            animation-fill-mode:forwards;
+            animation-fill-mode: forwards;
 
             @keyframes slideFromLeft {
                 0% {
-                  opacity: 0;
+                    opacity: 0;
                 }
                 100% {
                     opacity: 1;
                 }
-              }
+            }
+            @include mobile {
+                border-radius: 10%;
+            }
+
+            @include tablet {
+                border-radius: 10%;
+            }
+
             img {
                 height: 190%;
                 transform: translateX(600px);
 
                 // position: absolute;
-                animation: 4s ease-out 3s 1 slideInFromLeft;
-                animation-fill-mode:forwards;
+                animation: 3s ease-out 3s 1 slideInFromLeft;
+                animation-fill-mode: forwards;
 
                 @keyframes slideInFromLeft {
                     0% {
-                      transform: translateX(-6000px);
+                        transform: translateX(-600px);
                     }
-           
-                      
+
                     100% {
-                      transform: translateX(0px);
-                    //   position: static;
+                        transform: translateX(-35px);
+                        //   position: static;
                     }
-                
-                  }
+                }
             }
         }
     }
@@ -75,15 +85,15 @@
             flex-direction: column;
             justify-content: center;
 
-            @include mobile{
+            @include mobile {
                 padding-left: 0;
                 align-items: center;
             }
             h1 {
                 font-size: 60px;
                 margin: 10px 0;
-                @include mobile{
-                font-size: 40px;
+                @include mobile {
+                    font-size: 40px;
                 }
             }
             h2 {
@@ -91,9 +101,9 @@
             }
             h3 {
                 font-size: 30px;
-                @include mobile{
+                @include mobile {
                     font-size: 20px;
-                    }
+                }
                 span {
                     font-size: inherit;
                     color: crimson;
@@ -112,7 +122,7 @@
                 }
             }
 
-            .iconWrapper{
+            .iconWrapper {
                 margin: 0;
                 padding: 0;
                 width: 250px;
@@ -120,35 +130,35 @@
                 display: flex;
                 justify-content: space-between;
 
-                a{
+                a {
                     display: flex;
                     color: white;
 
-                .icon{
-                    height: 32px;
-                    
-                    width: 32px;
+                    .icon {
+                        height: 32px;
+
+                        width: 32px;
+                    }
                 }
             }
+        }
+    }
+    .arrow {
+        a {
+            left: 40%;
+            position: absolute;
+            bottom: 10px;
+            // width: 30px;
+            img {
+                width: 60px;
+                transform: rotate(90deg);
+                animation: arrowBlick 1s infinite;
+            }
+            @keyframes arrowBlick {
+                100% {
+                    opacity: 0.5;
+                }
             }
         }
     }
-    .arrow{
-    a {
-        left: 40%;
-        position: absolute;
-        bottom: 10px;
-        // width: 30px;
-        img {
-            width: 60px;
-            transform: rotate(90deg);
-            animation: arrowBlick 1s infinite;
-        }
-        @keyframes arrowBlick {
-            100% {
-                opacity: 0.5;
-            }
-        }
-    }
-}
 }

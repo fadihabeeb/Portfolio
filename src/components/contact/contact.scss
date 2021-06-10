@@ -30,6 +30,10 @@
             justify-content: center;
             box-shadow: 10px 5px 35px rgba(0, 0, 0, 1);
         }
+        .pageTitle{
+            color: white;
+            font-size: 45px;
+        }
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -55,18 +59,19 @@
                 background-color: $secondaryColor;
                 width: 80%;
                 height: 30px;
-                font-size: 14px;
+                font-size: 18px;
                 border: none;
                 border-bottom: 3px solid white;
                 margin-bottom: 1.5em;
-           
+                color: white;
+
                 &:focus {
                     outline: none;
                 }
                 
            
                 @include mobile {
-                    width: 200px;
+                    width: 80%;
                     height: 20px;
                 }
             }
@@ -74,16 +79,16 @@
                 background-color: $secondaryColor;
                 width: 80%;
                 height: 200px;
-                font-style: 14px;
+                font-size: 18px;
                 border: none;
                 border-bottom: 3px solid white;
                 margin-bottom: 1.5em;
-
+                color: white;
                 &:focus {
                     outline: none;
                 }
                 @include mobile {
-                    width: 200px;
+                    width: 80%;
                     height: 100 px;
                 }
             }
@@ -93,6 +98,8 @@
                 color: white;
                 background-color: crimson;
                 // border-radius: 10px;
+                font-size: 18px;
+
                 font-weight: 400;
                 border: none;
                 cursor: pointer;

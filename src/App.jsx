@@ -16,12 +16,11 @@ const override = css`
   background-color: #252525;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  border-color: crimson;
+  overflow: hidden;               
+
   height: 350px;
   width: 800px;
   overflow: hidden;
-
 `;
 
 
@@ -72,6 +71,7 @@ function App() {
       <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
+      
         <Intro />
         <About />
         {/* <Portfolio /> */}

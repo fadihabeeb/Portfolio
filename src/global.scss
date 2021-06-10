@@ -6,12 +6,17 @@ $ThirdlyColor: #252525;
 $fontColor: #252525;
 $secondaryFontColor: #252525;
 
-
-
 $width: 768px;
+$widthTablet: 950px;
 
 @mixin mobile {
-    @media(max-width: #{$width}){
-        @content
+    @media (max-width: #{$width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$widthTablet}) {
+        @content;
     }
 }

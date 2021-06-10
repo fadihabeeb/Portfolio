@@ -23,7 +23,7 @@ export default function Intro() {
         <div className="intro" id="intro">
             <div className="left">
                 <div className="imgContainer">
-                    <img src="assests/Man.png" alt="" />
+                    <img src="assests/FadiHabeeb (1).png" alt="" />
                 </div>
 
             </div>
@@ -38,15 +38,13 @@ export default function Intro() {
                         <a href="https://www.facebook.com/fadi.habeib" target="_blank" rel="noreferrer"> <FacebookIcon className="icon" /></a>
                         <a href="https://www.instagram.com/fadihabeeb/" target="_blank" rel="noreferrer"> <InstagramIcon className="icon" /></a>
 
-                        {/* 
-                        <InstagramIcon className="icon" />
-                        <LinkedInIcon className="icon" />
-                        <GitHubIcon className="icon" /> */}
+                        
+       
 
                     </div>
                 </div>
                 <div className="arrow">
-                    <a href="#about">
+                    <a href="#a">
                         <img src="assests/whiteArrow.png" alt="" />
                     </a>
                 </div>

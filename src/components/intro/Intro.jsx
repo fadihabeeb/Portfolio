@@ -44,7 +44,7 @@ export default function Intro() {
                     </div>
                 </div>
                 <div className="arrow">
-                    <a href="#a">
+                    <a href="#about">
                         <img src="assests/whiteArrow.png" alt="" />
                     </a>
                 </div>

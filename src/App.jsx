@@ -49,8 +49,9 @@ function App() {
   useEffect(() => {
       init(textRef.current, {
           showCursor: true,
-          backDelay: 1500,
-          strings: ["Loading....", "Please hold tight"]
+          backDelay: 200,
+          strings: ["Loading...."],
+          typeSpeed:  50,
 
       })
   }, [])

@@ -32,7 +32,7 @@ function App() {
   let [color, setColor] = useState("#ffffff");
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const delay = 6;
+  const delay = 3;
 
   useEffect(
     () => {

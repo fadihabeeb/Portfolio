@@ -6,7 +6,6 @@
     align-items: center;
     position: relative;
 
-
     .arrow {
         height: 60px;
         position: absolute;
@@ -65,6 +64,7 @@
                 .left {
                     @include mobile {
                         flex: 1;
+                        overflow: hidden;
                     }
                     flex: 4;
                     height: 100%;
@@ -79,6 +79,10 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
+
+                        @include mobile {
+                            overflow: hidden;
+                        }
 
                         .techWrapper {
                             display: flex;
@@ -103,43 +107,26 @@
                                 }
                             }
                         }
-                        // .imgContainer {
-                        //     width: 40px;
-                        //     height: 40px;
-                        //     border-radius: 50%;
-                        //     background-color: rgb(243, 149, 115);
-                        //     display: flex;
-                        //     align-items: center;
-                        //     justify-content: center;
-
-                        //     img {
-                        //         width: 25px;
-                        //     }
-                        // }
-
-             
-                          
                     }
-                        h2 {
-                            font-size: 25px;
-                            margin-bottom: 15px;
-                            color: white;
-                        }
+                    h2 {
+                        font-size: 25px;
+                        margin-bottom: 15px;
+                        color: white;
+                    }
+                    p {
+                        font-size: 20px;
+                        color: white;
+                        letter-spacing: 0.1rem;
+                        margin-bottom: 50px;
+                    }
+                    @include mobile {
+                        width: 95%;
                         p {
-                            font-size: 20px;
-                            color: white;
-                            letter-spacing: 0.1rem;
-                            margin-bottom: 50px;
+                            font-size: 18px;
                         }
-                        @include mobile{
-                            width: 95%;
-                            p {
-                                font-size: 18px;
-                            }
-                            h2 {
-                                font-size: 21px;
-                    
-                            }
+                        h2 {
+                            font-size: 21px;
+                        }
                     }
                 }
 

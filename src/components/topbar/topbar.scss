@@ -73,6 +73,7 @@
                     background-color: white;
                     transform-origin: left;
                     transition: all 2s ease;
+                    font-weight: 600;
                 }
             }
         }
@@ -81,15 +82,12 @@
         // background-color: $mainColor;
 
         .left {
-            
             color: $secondaryFontColor;
             .itemContainer {
-            span {
-                color: $secondaryFontColor;
-                font-weight: 600;
-                
+                span {
+                    color: $secondaryFontColor;
+                }
             }
-        }
         }
         background-color: $menuActive;
         color: $secondaryFontColor;

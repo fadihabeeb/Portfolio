@@ -47,7 +47,10 @@
         scroll-behavior: smooth;
         scroll-snap-type: y proximity;
 
-        
+        @include mobile{
+            scroll-snap-type: none;
+
+        }
         &::-webkit-scrollbar {
             display: none;
         }

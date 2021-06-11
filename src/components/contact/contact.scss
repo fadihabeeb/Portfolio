@@ -59,7 +59,7 @@
                 background-color: $secondaryColor;
                 width: 80%;
                 height: 30px;
-                font-size: 18px;
+                font-size: 16px;
                 border: none;
                 border-bottom: 3px solid white;
                 margin-bottom: 1.5em;
@@ -79,7 +79,7 @@
                 background-color: $secondaryColor;
                 width: 80%;
                 height: 200px;
-                font-size: 18px;
+                font-size: 16px;
                 border: none;
                 border-bottom: 3px solid white;
                 margin-bottom: 1.5em;
@@ -108,9 +108,7 @@
                     overflow: none;
                 }
             }
-            span {
-                color: green;
-            }
+          
         }
     }
 }

@@ -116,6 +116,10 @@
                         //         width: 25px;
                         //     }
                         // }
+
+             
+                          
+                    }
                         h2 {
                             font-size: 25px;
                             margin-bottom: 15px;
@@ -127,6 +131,15 @@
                             letter-spacing: 0.1rem;
                             margin-bottom: 50px;
                         }
+                        @include mobile{
+                            width: 95%;
+                            p {
+                                font-size: 18px;
+                            }
+                            h2 {
+                                font-size: 21px;
+                       
+                            }
                     }
                 }
 

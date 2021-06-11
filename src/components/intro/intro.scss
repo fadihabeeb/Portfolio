@@ -25,8 +25,8 @@
             justify-content: center;
 
             
-            width: 750px;
-            height: 750px;
+            width: 780px;
+            height: 780px;
             opacity: 0;
 
             background-color: crimson;
@@ -51,6 +51,7 @@
 
             @include tablet {
                 border-radius: 10%;
+                margin: 10px;
             }
 
             img {

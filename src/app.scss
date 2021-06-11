@@ -63,8 +63,11 @@
         @include mobile{
 
             .works{
-                height: 250vh;
-            }      
+                height: 280vh;
+            }    
+            .about{
+                height: 105vh;
+            }  
           }
     }
 }
